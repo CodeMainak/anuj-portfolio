@@ -7,9 +7,30 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.1rem;
 }
-
+.skill-item:hover {
+  background: #6c757d;
+  color: white !important;
+  scale: 1.1;
+  transition: 1s;
+  cursor: pointer;
+  border: none !important;
+}
 body {
   font-family: "Exo", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(left, #96a6bf, #63738c);
+  box-shadow: inset 0 0 1px 1px #5c6670;
+  border-radius: 5px !important;
 }
 #mycontact {
   height: 100%;
@@ -37,8 +58,8 @@ h5 {
 
 .home {
   width: 100%;
-  position: absolute;
-  top: 55vh;
+  position: relative;
+  /* top: 55vh; */
 }
 
 .home h1 {
@@ -48,12 +69,12 @@ h5 {
 }
 
 .area {
-  position: absolute;
-  top: 90px;
+  position: relative;
+
   background: #191924;
   background: -webkit-linear-gradient(to left, #6a6a6a28, #dfdcdceb);
   width: 100%;
-  height: 63vh;
+  height: 88vh;
 }
 
 .circles {
@@ -61,7 +82,7 @@ h5 {
   top: 100px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 75vh;
   overflow: hidden;
 }
 
@@ -159,13 +180,13 @@ h5 {
 .pull_up:hover {
   /* transform: rotate(-2deg); */
   scale: 1.04;
-  transition: 1.5s;
+  transition: 1s;
 }
 
 .pull_up_button:hover {
   /* transform: rotate(-2deg); */
   scale: 1.2;
-  transition: 1.5s;
+  transition: 1s;
 }
 /* The typing effect */
 @keyframes typing {
@@ -206,12 +227,23 @@ h5 {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
+  text-shadow: 6px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .nav-item {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1px;
+}
+#navbarSupportedContent > li > a {
+  border-radius: 20px;
+}
+
+#navbarSupportedContent > li > a:hover {
+  color: white !important;
+  background: #283038;
+  transition: 1s;
+  scale: 1.1;
 }
 
 .welcome_text {
@@ -287,5 +319,90 @@ h5 {
   100% {
     opacity: 0;
     transform: rotate(-1rem);
+  }
+}
+
+footer {
+  margin: 42px !important;
+  padding: 60px !important;
+}
+
+.intro_text {
+  font-size: 3rem !important;
+}
+.welcome_text {
+  font-size: 2rem !important;
+  text-decoration: underline;
+}
+
+.area > div > p {
+  font-size: 1.5rem;
+}
+
+#aboutMe > div div > h3 > strong {
+  font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .skill-item {
+    font-size: 0.8rem;
+  }
+  #aboutMe > div {
+    display: flex;
+    flex-direction: column;
+  }
+  #aboutMe > div > h1 {
+    font-size: 0.7rem;
+  }
+  #aboutMe > div > div > p {
+    font-size: 1rem !important;
+  }
+  #aboutMe > div > div > h3 {
+    font-size: 4rem !important;
+  }
+  #aboutMe > div > div {
+    width: 100%;
+    min-height: 300px !important;
+  }
+  .intro_text {
+    font-size: 2rem !important;
+  }
+  .welcome_text {
+    font-size: 1.5rem !important;
+  }
+  .area > div > p {
+    font-size: 1.1rem;
+    padding-top: 32px;
+  }
+  #aboutMe > div div > h3 {
+    background-color: #283038;
+    color: #fff;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #aboutMe > div div > h3 > strong {
+    font-size: 1.4rem;
+  }
+  .my_form {
+    width: 80vw;
+  }
+  .pull_up_button {
+    width: fit-content;
+    font-size: 1rem;
+  }
+  footer {
+    margin: 42px !important;
+    padding: 42px !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .pull_up_button {
+    width: fit-content;
+    font-size: 0.9rem;
+  }
+  footer {
+    margin: 24px !important;
+    padding: 24px !important;
   }
 }
